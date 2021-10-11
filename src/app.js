@@ -6,6 +6,7 @@ const request=require('request')
 const geo=require('./utils/geocode')
 const weather=require('./utils/weather')
 app.use(express.json())
+const port=process.env.PORT || 3000
 //app.com
 //app.com/help
 //app.com/about
@@ -83,7 +84,7 @@ app.get('*',(req,res)=>
         errormessage:'the page not found'
     })
 })
-app.listen(3000,()=>
+app.listen(port,()=>
 {
-    console.log('port 3000 connected')
+    console.log('port connected')
 })
